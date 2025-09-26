@@ -1,3 +1,7 @@
+# Python artifacts
+*.pyc
+__pycache__/
+
 # Gitignore rules for Python backend
 .venv/
 .env
@@ -10,6 +14,7 @@ dist/
 # OS-specific files
 .DS_Store
 Thumbs.db
+
 
 
 
