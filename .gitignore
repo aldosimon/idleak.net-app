@@ -1,0 +1,19 @@
+# Gitignore rules for Python backend
+.venv/
+.env
+
+# Gitignore rules for Vue.js frontend
+node_modules/
+dist/
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+
+
+
+
+
+
