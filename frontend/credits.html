@@ -8,12 +8,13 @@
     <link rel="icon" type="image/svg+xml" href="/asset/favicon.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css">
 </head>
 <body>
 
 <div id="layout">
+    <!-- Menu toggle -->
     <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
         <span></span>
     </a>
 
@@ -23,38 +24,37 @@
 
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item menu-item-divided pure-menu-selected">
+                <li class="pure-menu-item">
                     <a href="ransom.html" class="pure-menu-link">Ransomware</a>
                 </li>
                 <li class="pure-menu-item"><a href="comingsoon.html" class="pure-menu-link">Coming soon</a></li>
-                <li class="pure-menu-item"><a href="credits.html" class="pure-menu-link">Credits</a></li>
+                <li class="pure-menu-item menu-item-divided pure-menu-selected"><a href="credits.html" class="pure-menu-link">Credits</a></li>
+
             </ul>
         </div>
     </div>
 
     <div id="main">
         <div class="header">
-            <h1>Ransomware Incident</h1>
-            <h2>List of ransomware incident involving Indonesian entity</h2>
+            <h1>Credits</h1>
+            <h2 class="content-subhead">Amazing resources used to build the site</h2>
+
         </div>
 
         <div class="content">
+            <p>
+                <li><a href="https://www.ransomware.live/">ransomware.live</a></li>
+                <li><a href="https://www.ransomlook.io/">ransomlook.io</a></li>
+                <li><a href="https://gridjs.io/">grid.js</a></li>
+                <li><a href="https://pure-css.github.io/">pure-css</a></li>
 
-            <section>
-                <div id="ransomware-table-container"></div>
-                </section>
-
-            <h2 class="content-subhead">How was the data collected</h2>
-            <p>We source our data from public sources that continuously monitors and scrapes ransomware leak sites for new victims. This information is pulled every hour.
             </p>
+
         </div>
     </div>
 </div>
 
 <script src="./js/ui.js"></script>
-<script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script type="module" src="./js/ransom.js"></script>
 
 </body>
 </html>
