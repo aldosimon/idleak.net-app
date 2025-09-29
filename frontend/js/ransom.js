@@ -14,7 +14,9 @@ async function fetchDataAndRender() {
 // Fetch all data from the Supabase table, omitting 'id' and 'country'
 const { data, error } = await _supabase
     .from(RANSOMWARE_TABLE)
-    .select('title, description, discovered_date, published_date, website, industry, source, url_source');
+    .select('title, description, discovered_date, published_date, website, industry, source, url_source')
+    .order('discovered_date', { ascending: false });
+
 
     if (error) {
         console.error('Error fetching data:', error);
