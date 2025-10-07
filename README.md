@@ -11,6 +11,7 @@ frontend and backend for idleak.net hosted @ gardnerresearch.org
 
 - move supabase utils out of idransom and create own file
 - add function to write when workers last executed to db
+- create API layer for the frontend to access, not direct db access
 - add workers for news feed
 - add workers for telegram
 - add workers for twitter (?)
