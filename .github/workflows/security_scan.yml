@@ -1,0 +1,32 @@
+name: SBOM and Vulnerability Scan
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+  security-events: write
+  actions: read
+
+jobs:
+  security_analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        
+      - name: create SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          format: spdx-json
+          output-file: sbom.json
+          
+      - name: Scan SBOM for Vulnerabilities with Grype
+        uses: anchore/scan-action@v6
+        with:
+          sbom: sbom.json
+          severity-cutoff: critical 
+          fail-build: true
