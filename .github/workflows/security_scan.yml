@@ -21,7 +21,7 @@ jobs:
       - name: create SBOM
         uses: anchore/sbom-action@v0
         with:
-          file: "./backend/workers/idransom/requirements.txt"
+          file: "."
           format: spdx-json
           output-file: sbom.json
           
